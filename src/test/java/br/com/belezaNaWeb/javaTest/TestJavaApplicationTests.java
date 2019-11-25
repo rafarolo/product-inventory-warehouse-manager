@@ -22,7 +22,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import br.com.belezaNaWeb.javaTest.domain.Inventory;
 import br.com.belezaNaWeb.javaTest.domain.Product;
 import br.com.belezaNaWeb.javaTest.domain.Warehouse;
-import br.com.belezaNaWeb.javaTest.domain.WharehouseType;
+import br.com.belezaNaWeb.javaTest.domain.WarehouseType;
 import br.com.belezaNaWeb.javaTest.repository.ProductRepository;
 import br.com.belezaNaWeb.javaTest.rest.ProductController;
 import br.com.belezaNaWeb.javaTest.service.ProductService;
@@ -59,8 +59,8 @@ public class TestJavaApplicationTests {
 	@Test
 	public void testCreate() {
 
-		WharehouseType.ECOMMERCE.setDescription(WharehouseType.ECOMMERCE.getDescription());
-		WharehouseType.PHYSICAL_STORE.setDescription(WharehouseType.PHYSICAL_STORE.getDescription());
+		WarehouseType.ECOMMERCE.setDescription(WarehouseType.ECOMMERCE.getDescription());
+		WarehouseType.PHYSICAL_STORE.setDescription(WarehouseType.PHYSICAL_STORE.getDescription());
 
 		Product p = new Product();
 		p = new Product(13L);
@@ -73,12 +73,12 @@ public class TestJavaApplicationTests {
 		List<Warehouse> warehouses = new ArrayList<Warehouse>();
 		Warehouse w1 = new Warehouse();
 		w1.equals(w1);
-		w1 = new Warehouse("SP", 8, WharehouseType.ECOMMERCE.name());
+		w1 = new Warehouse("SP", 8, WarehouseType.ECOMMERCE.name());
 		Warehouse w2 = new Warehouse();
 		w2 = new Warehouse();
 		w2.setLocality("SP");
 		w2.setQuantity(13);
-		w2.setType(WharehouseType.PHYSICAL_STORE.name());
+		w2.setType(WarehouseType.PHYSICAL_STORE.name());
 		w2.equals(w1);
 		warehouses.add(w1);
 		warehouses.add(w2);

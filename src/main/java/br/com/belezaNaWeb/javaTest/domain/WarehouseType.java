@@ -1,12 +1,12 @@
 package br.com.belezaNaWeb.javaTest.domain;
 
-public enum WharehouseType {
+public enum WarehouseType {
 
 	ECOMMERCE ("E-Commerce"), PHYSICAL_STORE("Physical Store");
 	
 	private String description;
 	
-	WharehouseType(String description) {
+	WarehouseType(String description) {
 		this.description = description;
 	}
 	
